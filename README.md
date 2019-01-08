@@ -1,6 +1,6 @@
 # Instant Username Search Rest Api
 
-Rest Api of the instan-username-search project.
+Rest Api of the instant-username-search project.
 
 ## Client Repository
 The client repo will be here.
@@ -16,8 +16,6 @@ mvn spring-boot:run
 ## Endpoints
 
 - Request to `/github/username` will check the availability of username on GitHub.
-- Request to `/services/getAll` will list the available websites to check.
-
 ```json
 {
   "url": "https://www.github.com/username",
@@ -25,6 +23,56 @@ mvn spring-boot:run
   "message": null
 }
 ```
+
+- Request to `/services/getAll` will list the available websites to check.
+
+```json
+[
+  {
+    "service": "Instagram",
+    "endpoint": "/instagram/{username}"
+  },
+  {
+    "service": "Twitter",
+    "endpoint": "/twitter/{username}"
+  },
+  {
+    "service": "Facebook",
+    "endpoint": "/facebook/{username}"
+  },
+  {
+    "service": "YouTube",
+    "endpoint": "/youtube/{username}"
+  },
+  {
+    "service": "Blogger",
+    "endpoint": "/blogger/{username}"
+  },
+  {
+    "service": "Google Plus",
+    "endpoint": "/google plus/{username}"
+  },
+
+  .
+  .
+  .
+
+  {
+    "service": "Reddit",
+    "endpoint": "/reddit/{username}"
+  },
+  {
+    "service": "Pinterest",
+    "endpoint": "/pinterest/{username}"
+  },
+  {
+    "service": "GitHub",
+    "endpoint": "/github/{username}"
+  }
+]
+```
+
+
 
 ## Credits
 Developed by [Umut Canbolat](https://github.com/umutcanbolat).

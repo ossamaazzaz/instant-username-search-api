@@ -623,7 +623,7 @@
     "errorType": "message",
     "errorMsg": "You need to sign in or sign up before continuing."
   },
-  "NameMC (Minecraft.net skins)": {
+  "NameMC": {
     "url": "https://namemc.com/profile/{}",
     "urlMain": "https://namemc.com/",
     "errorType": "message",

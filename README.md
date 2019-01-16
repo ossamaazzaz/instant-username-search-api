@@ -15,16 +15,17 @@ mvn spring-boot:run
 
 ## Endpoints
 
-- Request to `/github/username` will check the availability of username on GitHub.
+- Request to `/check/github/username` will check the availability of username on GitHub.
 ```json
 {
+  "service": "GitHub",
   "url": "https://www.github.com/username",
   "available": true,
   "message": null
 }
 ```
 
-- Request to `/services/getAll` will list the available websites to check.
+- Request to `/services/getAll` will list the all available websites to check for username.
 
 ```json
 [
@@ -52,22 +53,9 @@ mvn spring-boot:run
     "service": "Google Plus",
     "endpoint": "/google plus/{username}"
   },
-
-  .
-  .
-  .
-
   {
     "service": "Reddit",
     "endpoint": "/reddit/{username}"
-  },
-  {
-    "service": "Pinterest",
-    "endpoint": "/pinterest/{username}"
-  },
-  {
-    "service": "GitHub",
-    "endpoint": "/github/{username}"
   }
 ]
 ```

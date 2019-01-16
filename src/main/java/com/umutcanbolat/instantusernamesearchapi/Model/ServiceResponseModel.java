@@ -1,9 +1,18 @@
 package com.umutcanbolat.instantusernamesearchapi.Model;
 
 public class ServiceResponseModel {
+	private String service;
 	private String url;
 	private boolean available;
 	private String message;
+
+	public String getService() {
+		return service;
+	}
+
+	public void setService(String service) {
+		this.service = service;
+	}
 
 	public String getUrl() {
 		return url;
@@ -31,11 +40,13 @@ public class ServiceResponseModel {
 
 	@Override
 	public String toString() {
-		return "ServiceResponseModel [url=" + url + ", available=" + available + ", message=" + message + "]";
+		return "ServiceResponseModel [service=" + service + ", url=" + url + ", available=" + available + ", message="
+				+ message + "]";
 	}
 
-	public ServiceResponseModel(String url, boolean available) {
+	public ServiceResponseModel(String service, String url, boolean available) {
 		super();
+		this.service = service;
 		this.url = url;
 		this.available = available;
 	}

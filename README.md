@@ -1,9 +1,12 @@
 # Instant Username Search Rest Api
+[![Build Status](https://travis-ci.org/umutcanbolat/instant-username-search-api.svg?branch=master)](https://travis-ci.org/umutcanbolat/instant-username-search-api)
 
 Rest Api of the instant-username-search project.
 
 ## Client Repository
-The client repo will be here.
+Check the client repo here: 
+[instant-username-search](https://github.com/umutcanbolat/instant-username-search)
+
 
 ## Installation
 
@@ -15,12 +18,12 @@ mvn spring-boot:run
 
 ## Endpoints
 
-- Request to `/check/github/username` will check the availability of username on GitHub.
+- Request to `/check/github/torvalds` will check the availability of the username `torvalds` on GitHub.
 ```json
 {
   "service": "GitHub",
-  "url": "https://www.github.com/username",
-  "available": true,
+  "url": "https://www.github.com/torvalds",
+  "available": false,
   "message": null
 }
 ```
@@ -48,10 +51,6 @@ mvn spring-boot:run
   {
     "service": "Blogger",
     "endpoint": "/blogger/{username}"
-  },
-  {
-    "service": "Google Plus",
-    "endpoint": "/google plus/{username}"
   },
   {
     "service": "Reddit",

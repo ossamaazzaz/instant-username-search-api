@@ -25,29 +25,14 @@
     "urlMain": "https://www.blogger.com/"
   },
   {
-    "service": "Google Plus",
-    "url": "https://plus.google.com/+{}",
-    "urlMain": "https://plus.google.com/"
-  },
-  {
     "service": "Reddit",
     "url": "https://www.reddit.com/user/{}",
     "urlMain": "https://www.reddit.com/"
-  },
-  {
-    "service": "Pinterest",
-    "url": "https://www.pinterest.com/{}",
-    "urlMain": "https://www.pinterest.com/"
-  },
+  },	
   {
     "service": "GitHub",
     "url": "https://www.github.com/{}",
     "urlMain": "https://www.github.com/"
-  },
-  {
-    "service": "Steam",
-    "url": "https://steamcommunity.com/id/{}",
-    "urlMain": "https://steamcommunity.com/"
   },
   {
     "service": "Vimeo",
@@ -93,11 +78,6 @@
     "service": "9GAG",
     "url": "https://9gag.com/u/{}",
     "urlMain": "https://9gag.com/"
-  },
-  {
-    "service": "Flipboard",
-    "url": "https://flipboard.com/@{}",
-    "urlMain": "https://flipboard.com/"
   },
   {
     "service": "SlideShare",
@@ -320,11 +300,6 @@
     "urlMain": "https://www.ifttt.com/"
   },
   {
-    "service": "Ebay",
-    "url": "https://www.ebay.com/usr/{}",
-    "urlMain": "https://www.ebay.com/"
-  },
-  {
     "service": "Slack",
     "url": "https://{}.slack.com",
     "urlMain": "https://slack.com"
@@ -345,11 +320,6 @@
     "urlMain": "https://hackerone.com/"
   },
   {
-    "service": "Tinder",
-    "url": "https://www.gotinder.com/@{}",
-    "urlMain": "https://tinder.com/"
-  },
-  {
     "service": "We Heart It",
     "url": "https://weheartit.com/{}",
     "urlMain": "https://weheartit.com/"
@@ -358,11 +328,6 @@
     "service": "Flickr",
     "url": "https://www.flickr.com/people/{}",
     "urlMain": "https://www.flickr.com/"
-  },
-  {
-    "service": "WordPress",
-    "url": "https://{}.wordpress.com",
-    "urlMain": "https://wordpress.com"
   },
   {
     "service": "Unsplash",
@@ -375,29 +340,14 @@
     "urlMain": "https://www.pexels.com/"
   },
   {
-    "service": "devRant",
-    "url": "https://devrant.com/users/{}",
-    "urlMain": "https://devrant.com/"
-  },
-  {
     "service": "MyAnimeList",
     "url": "https://myanimelist.net/profile/{}",
     "urlMain": "https://myanimelist.net/"
   },
   {
-    "service": "ImageShack",
-    "url": "https://imageshack.us/user/{}",
-    "urlMain": "https://imageshack.us/"
-  },
-  {
     "service": "Badoo",
     "url": "https://badoo.com/profile/{}",
     "urlMain": "https://badoo.com/"
-  },
-  {
-    "service": "MeetMe",
-    "url": "https://www.meetme.com/{}",
-    "urlMain": "https://www.meetme.com/"
   },
   {
     "service": "Quora",
@@ -413,11 +363,6 @@
     "service": "Giphy",
     "url": "https://giphy.com/{}",
     "urlMain": "https://giphy.com/"
-  },
-  {
-    "service": "Taringa",
-    "url": "https://www.taringa.net/{}",
-    "urlMain": "https://taringa.net/"
   },
   {
     "service": "SourceForge",
@@ -450,11 +395,6 @@
     "urlMain": "https://crevado.com/"
   },
   {
-    "service": "Carbonmade",
-    "url": "https://{}.carbonmade.com",
-    "urlMain": "https://carbonmade.com/"
-  },
-  {
     "service": "Coroflot",
     "url": "https://www.coroflot.com/{}",
     "urlMain": "https://coroflot.com/"
@@ -465,11 +405,6 @@
     "urlMain": "https://jimdosite.com/"
   },
   {
-    "service": "Repl.it",
-    "url": "https://repl.it/@{}",
-    "urlMain": "https://repl.it/"
-  },
-  {
     "service": "Issuu",
     "url": "https://issuu.com/{}",
     "urlMain": "https://issuu.com/"
@@ -478,11 +413,6 @@
     "service": "YouPic",
     "url": "https://youpic.com/photographer/{}",
     "urlMain": "https://youpic.com/"
-  },
-  {
-    "service": "House-Mixes.com",
-    "url": "https://www.house-mixes.com/profile/{}",
-    "urlMain": "https://www.house-mixes.com/"
   },
   {
     "service": "Letterboxd",
@@ -510,11 +440,6 @@
     "urlMain": "https://www.academia.edu/"
   },
   {
-    "service": "BlackPlanet",
-    "url": "http://blackplanet.com/{}",
-    "urlMain": "http://blackplanet.com/"
-  },
-  {
     "service": "Cloob",
     "url": "https://www.cloob.com/name/{}",
     "urlMain": "https://www.cloob.com/"
@@ -530,11 +455,6 @@
     "urlMain": "https://www.rajce.idnes.cz/"
   },
   {
-    "service": "VirusTotal",
-    "url": "https://www.virustotal.com/#/user/{}",
-    "urlMain": "https://www.virustotal.com/"
-  },
-  {
     "service": "WebNode",
     "url": "https://{}.webnode.cz/",
     "urlMain": "https://www.webnode.cz/"
@@ -543,16 +463,6 @@
     "service": "Aptoide",
     "url": "https://{}.en.aptoide.com/",
     "urlMain": "https://en.aptoide.com/"
-  },
-  {
-    "service": "GitLab",
-    "url": "https://gitlab.com/{}",
-    "urlMain": "https://gitlab.com/"
-  },
-  {
-    "service": "NameMC",
-    "url": "https://namemc.com/profile/{}",
-    "urlMain": "https://namemc.com/"
   },
   {
     "service": "Plug.DJ",

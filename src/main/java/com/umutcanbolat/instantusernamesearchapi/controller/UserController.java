@@ -42,6 +42,9 @@ public class UserController {
 			for (SiteModel site : sitesList) {
 				if (site.getService().toLowerCase().equals(service.toLowerCase())) {
 					String url = site.getUrl().replace("{}", username);
+					// set unirest not to follow redirects
+//					Unirest.setHttpClient(
+//							org.apache.http.impl.client.HttpClients.custom().disableRedirectHandling().build());
 					HttpResponse<String> response = Unirest.get(url).header("Connection", "keep-alive")
 							.header("Upgrade-Insecure-Requests", "1")
 							.header("User-Agent",
@@ -52,7 +55,16 @@ public class UserController {
 							.asString();
 					boolean available = false;
 					if (response.getStatus() != 200) {
+						System.out.println(service + "     " + response.getStatus());
 						available = true;
+					} else {
+						// quick solution for hackernews
+						if ("HackerNews".equals(site.getService())) {
+							if ("No such user.".equals(response.getBody())) {
+								available = true;
+							}
+						}
+
 					}
 					return new ServiceResponseModel(site.getService(), url, available);
 				}

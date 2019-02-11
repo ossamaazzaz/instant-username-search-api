@@ -95,11 +95,6 @@
     "urlMain": "https://open.spotify.com/"
   },
   {
-    "service": "MixCloud",
-    "url": "https://www.mixcloud.com/{}",
-    "urlMain": "https://www.mixcloud.com/"
-  },
-  {
     "service": "Scribd",
     "url": "https://www.scribd.com/{}",
     "urlMain": "https://www.scribd.com/"

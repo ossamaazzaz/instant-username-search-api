@@ -7,6 +7,8 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,13 +26,16 @@ import com.umutcanbolat.instantusernamesearchapi.Model.SiteModel;
 @RestController
 public class UserController {
 
+	@Autowired
+	private ResourceLoader resourceLoader;
+
 	@RequestMapping("/check/{service}/{username}")
 	public ServiceResponseModel searchUsername(@PathVariable String service, @PathVariable String username)
 			throws FileNotFoundException, UnirestException {
 		try {
+
 			// read sites data from resources
-			ClassLoader classLoader = getClass().getClassLoader();
-			File sitesFile = new File(classLoader.getResource("static/sites.json").getFile());
+			final File sitesFile = resourceLoader.getResource("static/sites.json").getFile();
 
 			// parse json to model list
 			Gson gson = new Gson();
@@ -83,8 +88,7 @@ public class UserController {
 			List<ServiceModel> serviceList = new ArrayList<ServiceModel>();
 
 			// read sites data from resources
-			ClassLoader classLoader = getClass().getClassLoader();
-			File sitesFile = new File(classLoader.getResource("static/sites.json").getFile());
+			final File sitesFile = resourceLoader.getResource("static/sites.json").getFile();
 
 			// parse json to model list
 			Gson gson = new Gson();

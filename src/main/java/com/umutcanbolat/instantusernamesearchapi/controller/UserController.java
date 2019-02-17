@@ -72,7 +72,7 @@ public class UserController {
 			// service not found
 			return new ServiceResponseModel("Service: " + service + " is not supported");
 		} catch (Exception ex) {
-			return new ServiceResponseModel(ex.getStackTrace().toString());
+			return new ServiceResponseModel(ex.getMessage());
 		}
 	}
 

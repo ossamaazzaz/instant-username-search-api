@@ -471,7 +471,7 @@
   },
   {
     "service": "Mastodon",
-    "url": "https://mstdn.io/@{}",
-    "urlMain": "https://mstdn.io/"
+    "url": "https://mastodon.social/@{}",
+    "urlMain": "https://mastodon.social/"
   }
 ]

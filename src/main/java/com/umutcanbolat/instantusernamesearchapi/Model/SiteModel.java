@@ -3,7 +3,9 @@ package com.umutcanbolat.instantusernamesearchapi.Model;
 public class SiteModel {
 	private String service;
 	private String url;
-	private String urlMain;
+	private String urlRegister;
+	private int errorType;
+	private String errorMsg;
 
 	public String getService() {
 		return service;
@@ -21,24 +23,36 @@ public class SiteModel {
 		this.url = url;
 	}
 
-	public String getUrlMain() {
-		return urlMain;
+	public String getUrlRegister() {
+		return urlRegister;
 	}
 
-	public void setUrlMain(String urlMain) {
-		this.urlMain = urlMain;
+	public void setUrlRegister(String urlRegister) {
+		this.urlRegister = urlRegister;
 	}
 
-	@Override
-	public String toString() {
-		return "SitesModel [service=" + service + ", url=" + url + ", urlMain=" + urlMain + "]";
+	public int getErrorType() {
+		return errorType;
 	}
 
-	public SiteModel(String service, String url, String urlMain) {
+	public void setErrorType(int errorType) {
+		this.errorType = errorType;
+	}
+
+	public String getErrorMsg() {
+		return errorMsg;
+	}
+
+	public void setErrorMsg(String errorMsg) {
+		this.errorMsg = errorMsg;
+	}
+
+	public SiteModel(String service, String url, String urlRegister, int errorType, String errorMsg) {
 		super();
 		this.service = service;
 		this.url = url;
-		this.urlMain = urlMain;
+		this.urlRegister = urlRegister;
+		this.errorType = errorType;
+		this.errorMsg = errorMsg;
 	}
-
 }

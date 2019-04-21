@@ -47,7 +47,7 @@ public class UserController {
 			List<SiteModel> sitesList = gson.fromJson(reader, listType);
 
 			for (SiteModel site : sitesList) {
-				if (site.getService().toLowerCase().equals(service.toLowerCase())) {
+				if (site.getService().equalsIgnoreCase(service)) {
 					String url = site.getUrl().replace("{}", username);
 					// set unirest not to follow redirects
 //					Unirest.setHttpClient(
@@ -61,18 +61,28 @@ public class UserController {
 							.header("Accept-Encoding", "gzip, deflate").header("Accept-Language", "en-US;q=1")
 							.asString();
 					boolean available = false;
-					if (response.getStatus() != 200) {
-						System.out.println(service + "     " + response.getStatus());
-						available = true;
-					} else {
-						// quick solution for hackernews
-						if ("HackerNews".equals(site.getService())) {
-							if ("No such user.".equals(response.getBody())) {
-								available = true;
-							}
+					
+					/* 
+					 * Error Types
+					 * 0: returns HTTP 4xx response when the username is not taken.
+					 * 1: still returns HTTP 2xx when the username is not taken, so we check the response body for errorMsg.
+					 * 2: returns HTTP 4xx if the username is not taken or disabled. 
+					 * 	  Since disabled usernames cannot be taken again, we check the response body.
+					 */
+					if (site.getErrorType() == 0) {
+						if (response.getStatus() != 200) {
+							available = true;
 						}
-
+					} else if (site.getErrorType() == 1) {
+						if (response.getBody().contains(site.getErrorMsg())) {
+							available = true;
+						}
+					}else if (site.getErrorType() == 2) {
+						if (response.getStatus() != 200 && response.getBody().contains(site.getErrorMsg())) {
+							available = true;
+						}
 					}
+
 					return new ServiceResponseModel(site.getService(), url, available);
 				}
 			}

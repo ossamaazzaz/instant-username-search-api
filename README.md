@@ -1,5 +1,5 @@
 # Instant Username Search Rest Api
-[![Build Status](https://travis-ci.org/umutcanbolat/instant-username-search-api.svg?branch=master)](https://travis-ci.org/umutcanbolat/instant-username-search-api)
+[![Build Status](https://travis-ci.org/instant-username-search/instant-username-search-api.svg?branch=master)](https://travis-ci.org/umutcanbolat/instant-username-search-api)
 
 Rest Api of the instant-username-search project.
 

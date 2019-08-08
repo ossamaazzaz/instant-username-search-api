@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,6 +33,7 @@ public class UserController {
 	private ResourceLoader resourceLoader;
 
 	@RequestMapping("/check/{service}/{username}")
+	@Cacheable("availabilities")
 	public ServiceResponseModel searchUsername(@PathVariable String service, @PathVariable String username)
 			throws FileNotFoundException, UnirestException {
 		try {

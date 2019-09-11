@@ -213,8 +213,8 @@
     "service": "Carbonmade",
     "url": "https://{}.carbonmade.com",
     "urlRegister": "https://carbonmade.com/",
-    "errorType": 1,
-    "errorMsg": "You've accidentally stumbled upon Mike's super secret nap grotto."
+    "errorType": 0,
+    "errorMsg": null
   },
   {
     "service": "CashMe",
@@ -283,8 +283,8 @@
     "service": "CreativeMarket",
     "url": "https://creativemarket.com/{}",
     "urlRegister": "https://creativemarket.com/",
-    "errorType": 1,
-    "errorMsg": "Fonts, Graphics, Themes and More ~ Creative Market"
+    "errorType": 0,
+    "errorMsg": null
   },
   {
     "service": "Crevado",
@@ -343,13 +343,6 @@
     "errorMsg": null
   },
   {
-    "service": "EVE Online",
-    "url": "https://evewho.com/pilot/{}/",
-    "urlRegister": "https://eveonline.com",
-    "errorType": 1,
-    "errorMsg": "Largest Independent Corporations"
-  },
-  {
     "service": "Ebay",
     "url": "https://www.ebay.com/usr/{}",
     "urlRegister": "https://www.ebay.com/",
@@ -374,8 +367,8 @@
     "service": "EyeEm",
     "url": "https://www.eyeem.com/u/{}",
     "urlRegister": "https://www.eyeem.com/",
-    "errorType": 1,
-    "errorMsg": "EyeEm - Your source for outstanding imagery"
+    "errorType": 0,
+    "errorMsg": null
   },
   {
     "service": "Flickr",
@@ -388,8 +381,8 @@
     "service": "Flipboard",
     "url": "https://flipboard.com/@{}",
     "urlRegister": "https://flipboard.com/",
-    "errorType": 1,
-    "errorMsg": "loading..."
+    "errorType": 0,
+    "errorMsg": null
   },
   {
     "service": "Foursquare",
@@ -603,10 +596,10 @@
   },
   {
     "service": "NameMC",
-    "url": "https://namemc.com/profile/{}",
+    "url": "https://namemc.com/name/{}",
     "urlRegister": "https://namemc.com/",
     "errorType": 1,
-    "errorMsg": "Profiles: 0 results"
+    "errorMsg": "Status: Available"
   },
   {
     "service": "Newgrounds",
@@ -854,13 +847,6 @@
     "errorMsg": null
   },
   {
-    "service": "Wattpad",
-    "url": "https://www.wattpad.com/user/{}",
-    "urlRegister": "https://www.wattpad.com/",
-    "errorType": 0,
-    "errorMsg": null
-  },
-  {
     "service": "We Heart It",
     "url": "https://weheartit.com/{}",
     "urlRegister": "https://weheartit.com/",
@@ -875,9 +861,9 @@
     "errorMsg": null
   },
   {
-    "service": "Wikia",
-    "url": "https://wikia.com/wiki/User:{}",
-    "urlRegister": "http://www.wikia.com/",
+    "service": "Fandom",
+    "url": "https://community.fandom.com/wiki/User:{}",
+    "urlRegister": "https://www.fandom.com/register",
     "errorType": 0,
     "errorMsg": null
   },

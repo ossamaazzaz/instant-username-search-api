@@ -455,6 +455,13 @@
     "errorMsg": null
   },
   {
+    "service": "Homescreen.me",
+    "url": "https://homescreen.me/{}",
+    "urlRegister": "https://homescreen.me/signup",
+    "errorType": 0,
+    "errorMsg": null
+  },
+  {
     "service": "IFTTT",
     "url": "https://www.ifttt.com/p/{}",
     "urlRegister": "https://www.ifttt.com/",

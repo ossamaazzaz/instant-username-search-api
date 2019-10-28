@@ -6,9 +6,10 @@ spring:
     username: ${SPRING_DATASOURCE_USERNAME}
     password: ${SPRING_DATASOURCE_PASSWORD}
   jpa:
+    hibernate:
+      # Hibernate ddl auto (create, create-drop, validate, update)
+      ddl-auto: update
     properties:
       hibernate:
         # The SQL dialect makes Hibernate generate better SQL for the chosen database
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        # Hibernate ddl auto (create, create-drop, validate, update)
-        ddl-auto: update

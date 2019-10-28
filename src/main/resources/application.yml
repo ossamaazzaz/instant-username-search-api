@@ -1,0 +1,14 @@
+spring:
+  # Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+  # Corresponding environment variables must be set for DB_NAME, DB_USER and DB_PASS
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+  jpa:
+    properties:
+      hibernate:
+        # The SQL dialect makes Hibernate generate better SQL for the chosen database
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        # Hibernate ddl auto (create, create-drop, validate, update)
+        ddl-auto: update

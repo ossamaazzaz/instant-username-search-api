@@ -1,940 +1,940 @@
-[
-  {
+{
+  "instagram": {
     "service": "Instagram",
     "url": "https://www.instagram.com/{}",
     "urlRegister": "https://www.instagram.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "twitter": {
     "service": "Twitter",
     "url": "https://twitter.com/{}",
     "urlRegister": "https://twitter.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "facebook": {
     "service": "Facebook",
     "url": "https://www.facebook.com/{}",
     "urlRegister": "https://www.facebook.com/",
     "errorType": 1,
     "errorMsg": "This page isn&#039;t available"
   },
-  {
+  "youtube": {
     "service": "YouTube",
     "url": "https://www.youtube.com/{}",
     "urlRegister": "https://www.youtube.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "medium": {
     "service": "Medium",
     "url": "https://medium.com/@{}",
     "urlRegister": "https://medium.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "reddit": {
     "service": "Reddit",
     "url": "https://www.reddit.com/user/{}",
     "urlRegister": "https://www.reddit.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "hackernews": {
     "service": "HackerNews",
     "url": "https://news.ycombinator.com/user?id={}",
     "urlRegister": "https://news.ycombinator.com/",
     "errorType": 1,
     "errorMsg": "No such user."
   },
-  {
+  "github": {
     "service": "GitHub",
     "url": "https://github.com/{}",
     "urlRegister": "https://github.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "quora": {
     "service": "Quora",
     "url": "https://www.quora.com/profile/{}",
     "urlRegister": "https://www.quora.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "9gag": {
     "service": "9GAG",
     "url": "https://9gag.com/u/{}",
     "urlRegister": "https://9gag.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "vk": {
     "service": "VK",
     "url": "https://vk.com/{}",
     "urlRegister": "https://vk.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "goodreads": {
     "service": "GoodReads",
     "url": "https://www.goodreads.com/{}",
     "urlRegister": "https://www.goodreads.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "blogger": {
     "service": "Blogger",
     "url": "https://{}.blogspot.com",
     "urlRegister": "https://www.blogger.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "patreon": {
     "service": "Patreon",
     "url": "https://www.patreon.com/{}",
     "urlRegister": "https://www.patreon.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "producthunt": {
     "service": "ProductHunt",
     "url": "https://www.producthunt.com/@{}",
     "urlRegister": "https://www.producthunt.com/",
     "errorType": 1,
     "errorMsg": "Product Hunt is a curation of the best new products"
   },
-  {
+  "500px": {
     "service": "500px",
     "url": "https://500px.com/{}",
     "urlRegister": "https://500px.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "about.me": {
     "service": "About.me",
     "url": "https://about.me/{}",
     "urlRegister": "https://about.me/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "academia.edu": {
     "service": "Academia.edu",
     "url": "https://independent.academia.edu/{}",
     "urlRegister": "https://www.academia.edu/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "angellist": {
     "service": "AngelList",
     "url": "https://angel.co/{}",
     "urlRegister": "https://angel.co/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "aptoide": {
     "service": "Aptoide",
     "url": "https://{}.en.aptoide.com/",
     "urlRegister": "https://en.aptoide.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "askfm": {
     "service": "AskFM",
     "url": "https://ask.fm/{}",
     "urlRegister": "https://ask.fm/",
     "errorType": 2,
     "errorMsg": "Page not found"
   },
-  {
+  "blip.fm": {
     "service": "BLIP.fm",
     "url": "https://blip.fm/{}",
     "urlRegister": "https://blip.fm/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "badoo": {
     "service": "Badoo",
     "url": "https://badoo.com/profile/{}",
     "urlRegister": "https://badoo.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "bandcamp": {
     "service": "Bandcamp",
     "url": "https://bandcamp.com/{}",
     "urlRegister": "https://bandcamp.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "basecamp": {
     "service": "Basecamp",
     "url": "https://{}.basecamphq.com",
     "urlRegister": "https://basecamp.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "behance": {
     "service": "Behance",
     "url": "https://www.behance.net/{}",
     "urlRegister": "https://www.behance.net/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "bitbucket": {
     "service": "BitBucket",
     "url": "https://bitbucket.org/{}/",
     "urlRegister": "https://bitbucket.org/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "bitcoinforum": {
     "service": "BitCoinForum",
     "url": "https://bitcoinforum.com/profile/{}",
     "urlRegister": "https://bitcoinforum.com",
     "errorType": 1,
     "errorMsg": "The user whose profile you are trying to view does not exist."
   },
-  {
+  "buzzfeed": {
     "service": "BuzzFeed",
     "url": "https://www.buzzfeed.com/{}",
     "urlRegister": "https://www.buzzfeed.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "canva": {
     "service": "Canva",
     "url": "https://www.canva.com/{}",
     "urlRegister": "https://www.canva.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "carbonmade": {
     "service": "Carbonmade",
     "url": "https://{}.carbonmade.com",
     "urlRegister": "https://carbonmade.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "cashme": {
     "service": "CashMe",
     "url": "https://cash.me/{}",
     "urlRegister": "https://cash.me/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "cloob": {
     "service": "Cloob",
     "url": "https://www.cloob.com/name/{}",
     "urlRegister": "https://www.cloob.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "codecademy": {
     "service": "Codecademy",
     "url": "https://www.codecademy.com/{}",
     "urlRegister": "https://www.codecademy.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "codementor": {
     "service": "Codementor",
     "url": "https://www.codementor.io/{}",
     "urlRegister": "https://www.codementor.io/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "codepen": {
     "service": "Codepen",
     "url": "https://codepen.io/{}",
     "urlRegister": "https://codepen.io/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "coderwall": {
     "service": "Coderwall",
     "url": "https://coderwall.com/{}",
     "urlRegister": "https://coderwall.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "colourlovers": {
     "service": "ColourLovers",
     "url": "https://www.colourlovers.com/lover/{}",
     "urlRegister": "https://www.colourlovers.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "contently": {
     "service": "Contently",
     "url": "https://{}.contently.com/",
     "urlRegister": "https://contently.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "coroflot": {
     "service": "Coroflot",
     "url": "https://www.coroflot.com/{}",
     "urlRegister": "https://coroflot.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "creativemarket": {
     "service": "CreativeMarket",
     "url": "https://creativemarket.com/{}",
     "urlRegister": "https://creativemarket.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "crevado": {
     "service": "Crevado",
     "url": "https://{}.crevado.com",
     "urlRegister": "https://crevado.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "crunchyroll": {
     "service": "Crunchyroll",
     "url": "https://www.crunchyroll.com/user/{}",
     "urlRegister": "https://www.crunchyroll.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "dev community": {
     "service": "DEV Community",
     "url": "https://dev.to/{}",
     "urlRegister": "https://dev.to/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "dailymotion": {
     "service": "DailyMotion",
     "url": "https://www.dailymotion.com/{}",
     "urlRegister": "https://www.dailymotion.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "designspiration": {
     "service": "Designspiration",
     "url": "https://www.designspiration.net/{}/",
     "urlRegister": "https://www.designspiration.net/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "deviantart": {
     "service": "DeviantART",
     "url": "https://www.deviantart.com/{}",
     "urlRegister": "https://www.deviantart.com",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "disqus": {
     "service": "Disqus",
     "url": "https://disqus.com/{}",
     "urlRegister": "https://disqus.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "dribbble": {
     "service": "Dribbble",
     "url": "https://dribbble.com/{}",
     "urlRegister": "https://dribbble.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "ebay": {
     "service": "Ebay",
     "url": "https://www.ebay.com/usr/{}",
     "urlRegister": "https://www.ebay.com/",
     "errorType": 1,
     "errorMsg": "The User ID you entered was not found. Please check the User ID and try again."
   },
-  {
+  "ello": {
     "service": "Ello",
     "url": "https://ello.co/{}",
     "urlRegister": "https://ello.co/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "etsy": {
     "service": "Etsy",
     "url": "https://www.etsy.com/shop/{}",
     "urlRegister": "https://www.etsy.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "eyeem": {
     "service": "EyeEm",
     "url": "https://www.eyeem.com/u/{}",
     "urlRegister": "https://www.eyeem.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "flickr": {
     "service": "Flickr",
     "url": "https://www.flickr.com/people/{}",
     "urlRegister": "https://www.flickr.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "flipboard": {
     "service": "Flipboard",
     "url": "https://flipboard.com/@{}",
     "urlRegister": "https://flipboard.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "foursquare": {
     "service": "Foursquare",
     "url": "https://foursquare.com/{}",
     "urlRegister": "https://foursquare.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "giphy": {
     "service": "Giphy",
     "url": "https://giphy.com/explore/{}",
     "urlRegister": "https://giphy.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "gitlab": {
     "service": "GitLab",
     "url": "https://gitlab.com/{}",
     "urlRegister": "https://gitlab.com/",
     "errorType": 1,
     "errorMsg": "You need to sign in or sign up before continuing."
   },
-  {
+  "gitee": {
     "service": "Gitee",
     "url": "https://gitee.com/{}",
     "urlRegister": "https://gitee.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "gravatar": {
     "service": "Gravatar",
     "url": "http://en.gravatar.com/{}",
     "urlRegister": "http://en.gravatar.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "gumroad": {
     "service": "Gumroad",
     "url": "https://www.gumroad.com/{}",
     "urlRegister": "https://www.gumroad.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "hackerone": {
     "service": "HackerOne",
     "url": "https://hackerone.com/{}",
     "urlRegister": "https://hackerone.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "house-mixes.com": {
     "service": "House-Mixes.com",
     "url": "https://www.house-mixes.com/profile/{}",
     "urlRegister": "https://www.house-mixes.com/",
     "errorType": 1,
     "errorMsg": "Profile Not Found"
   },
-  {
+  "houzz": {
     "service": "Houzz",
     "url": "https://houzz.com/user/{}",
     "urlRegister": "https://houzz.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "hubpages": {
     "service": "HubPages",
     "url": "https://hubpages.com/@{}",
     "urlRegister": "https://hubpages.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "homescreen.me": {
     "service": "Homescreen.me",
     "url": "https://homescreen.me/{}",
     "urlRegister": "https://homescreen.me/signup",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "ifttt": {
     "service": "IFTTT",
     "url": "https://www.ifttt.com/p/{}",
     "urlRegister": "https://www.ifttt.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "imageshack": {
     "service": "ImageShack",
     "url": "https://imageshack.us/user/{}",
     "urlRegister": "https://imageshack.us/",
     "errorType": 1,
     "errorMsg": "ImageShack - Best place for all of your image hosting and image sharing needs"
   },
-  {
+  "imgur": {
     "service": "Imgur",
     "url": "https://imgur.com/user/{}",
     "urlRegister": "https://imgur.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "instructables": {
     "service": "Instructables",
     "url": "https://www.instructables.com/member/{}",
     "urlRegister": "https://www.instructables.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "investing.com": {
     "service": "Investing.com",
     "url": "https://www.investing.com/traders/{}",
     "urlRegister": "https://www.investing.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "issuu": {
     "service": "Issuu",
     "url": "https://issuu.com/{}",
     "urlRegister": "https://issuu.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "itch.io": {
     "service": "Itch.io",
     "url": "https://{}.itch.io/",
     "urlRegister": "https://itch.io/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "jimdo": {
     "service": "Jimdo",
     "url": "https://{}.jimdosite.com",
     "urlRegister": "https://jimdosite.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "kaggle": {
     "service": "Kaggle",
     "url": "https://www.kaggle.com/{}",
     "urlRegister": "https://www.kaggle.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "kanoworld": {
     "service": "KanoWorld",
     "url": "https://api.kano.me/progress/user/{}",
     "urlRegister": "https://world.kano.me/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "keybase": {
     "service": "Keybase",
     "url": "https://keybase.io/{}",
     "urlRegister": "https://keybase.io/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "kik": {
     "service": "Kik",
     "url": "https://ws2.kik.com/user/{}",
     "urlRegister": "http://kik.me/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "kongregate": {
     "service": "Kongregate",
     "url": "https://www.kongregate.com/accounts/{}",
     "urlRegister": "https://www.kongregate.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "launchpad": {
     "service": "Launchpad",
     "url": "https://launchpad.net/~{}",
     "urlRegister": "https://launchpad.net/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "letterboxd": {
     "service": "Letterboxd",
     "url": "https://letterboxd.com/{}",
     "urlRegister": "https://letterboxd.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "livejournal": {
     "service": "LiveJournal",
     "url": "https://{}.livejournal.com",
     "urlRegister": "https://www.livejournal.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "mastodon": {
     "service": "Mastodon",
     "url": "https://mastodon.social/@{}",
     "urlRegister": "https://mastodon.social/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "meetme": {
     "service": "MeetMe",
     "url": "https://www.meetme.com/{}",
     "urlRegister": "https://www.meetme.com/",
     "errorType": 1,
     "errorMsg": "<title>MeetMe</title>"
   },
-  {
+  "mixcloud": {
     "service": "MixCloud",
     "url": "https://www.mixcloud.com/{}",
     "urlRegister": "https://www.mixcloud.com/",
     "errorType": 1,
     "errorMsg": "Page Not Found"
   },
-  {
+  "myanimelist": {
     "service": "MyAnimeList",
     "url": "https://myanimelist.net/profile/{}",
     "urlRegister": "https://myanimelist.net/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "namemc": {
     "service": "NameMC",
     "url": "https://namemc.com/name/{}",
     "urlRegister": "https://namemc.com/",
     "errorType": 1,
     "errorMsg": "Status: Available"
   },
-  {
+  "newgrounds": {
     "service": "Newgrounds",
     "url": "https://{}.newgrounds.com",
     "urlRegister": "https://newgrounds.com",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "pastebin": {
     "service": "Pastebin",
     "url": "https://pastebin.com/u/{}",
     "urlRegister": "https://pastebin.com/",
     "errorType": 1,
     "errorMsg": "You are currently not logged in, this means you can not edit or delete anything you paste."
   },
-  {
+  "pexels": {
     "service": "Pexels",
     "url": "https://www.pexels.com/@{}",
     "urlRegister": "https://www.pexels.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "photobucket": {
     "service": "Photobucket",
     "url": "https://photobucket.com/user/{}/library",
     "urlRegister": "https://photobucket.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "pinterest": {
     "service": "Pinterest",
     "url": "https://www.pinterest.com/{}/",
     "urlRegister": "https://www.pinterest.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "pixabay": {
     "service": "Pixabay",
     "url": "https://pixabay.com/en/users/{}",
     "urlRegister": "https://pixabay.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "plug.dj": {
     "service": "Plug.DJ",
     "url": "https://plug.dj/@/{}",
     "urlRegister": "https://plug.dj/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "rajce.net": {
     "service": "Rajce.net",
     "url": "https://{}.rajce.idnes.cz/",
     "urlRegister": "https://www.rajce.idnes.cz/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "repl.it": {
     "service": "Repl.it",
     "url": "https://repl.it/@{}",
     "urlRegister": "https://repl.it/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "reverbnation": {
     "service": "ReverbNation",
     "url": "https://www.reverbnation.com/{}",
     "urlRegister": "https://www.reverbnation.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "roblox": {
     "service": "Roblox",
     "url": "https://www.roblox.com/user.aspx?username={}",
     "urlRegister": "https://www.roblox.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "scribd": {
     "service": "Scribd",
     "url": "https://www.scribd.com/{}",
     "urlRegister": "https://www.scribd.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "signal": {
     "service": "Signal",
     "url": "https://community.signalusers.org/u/{}",
     "urlRegister": "https://community.signalusers.org",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "slack": {
     "service": "Slack",
     "url": "https://{}.slack.com",
     "urlRegister": "https://slack.com",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "slideshare": {
     "service": "SlideShare",
     "url": "https://slideshare.net/{}",
     "urlRegister": "https://slideshare.net/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "smashcast": {
     "service": "Smashcast",
     "url": "https://www.smashcast.tv/api/media/live/{}",
     "urlRegister": "https://www.smashcast.tv/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "soundcloud": {
     "service": "SoundCloud",
     "url": "https://soundcloud.com/{}",
     "urlRegister": "https://soundcloud.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "sourceforge": {
     "service": "SourceForge",
     "url": "https://sourceforge.net/u/{}",
     "urlRegister": "https://sourceforge.net/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "spotify": {
     "service": "Spotify",
     "url": "https://open.spotify.com/user/{}",
     "urlRegister": "https://open.spotify.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "star citizen": {
     "service": "Star Citizen",
     "url": "https://robertsspaceindustries.com/citizens/{}",
     "urlRegister": "https://robertsspaceindustries.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "steam": {
     "service": "Steam",
     "url": "https://steamcommunity.com/id/{}",
     "urlRegister": "https://steamcommunity.com/",
     "errorType": 1,
     "errorMsg": "The specified profile could not be found."
   },
-  {
+  "steamgroup": {
     "service": "SteamGroup",
     "url": "https://steamcommunity.com/groups/{}",
     "urlRegister": "https://steamcommunity.com/",
     "errorType": 1,
     "errorMsg": "No group could be retrieved for the given URL."
   },
-  {
+  "taringa": {
     "service": "Taringa",
     "url": "https://www.taringa.net/{}",
     "urlRegister": "https://taringa.net/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "telegram": {
     "service": "Telegram",
     "url": "https://t.me/{}",
     "urlRegister": "https://t.me/",
     "errorType": 1,
     "errorMsg": "<meta property=\"twitter:title\" content=\"Telegram: Contact"
   },
-  {
+  "tinder": {
     "service": "Tinder",
     "url": "https://www.gotinder.com/@{}",
     "urlRegister": "https://tinder.com/",
     "errorType": 1,
     "errorMsg": "Looking for Someone?"
   },
-  {
+  "tradingview": {
     "service": "TradingView",
     "url": "https://www.tradingview.com/u/{}/",
     "urlRegister": "https://www.tradingview.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "trakt": {
     "service": "Trakt",
     "url": "https://www.trakt.tv/users/{}",
     "urlRegister": "https://www.trakt.tv/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "trip": {
     "service": "Trip",
     "url": "https://www.trip.skyscanner.com/user/{}",
     "urlRegister": "https://www.trip.skyscanner.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "tripadvisor": {
     "service": "TripAdvisor",
     "url": "https://tripadvisor.com/members/{}",
     "urlRegister": "https://tripadvisor.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "twitch": {
     "service": "Twitch",
     "url": "https://m.twitch.tv/{}",
     "urlRegister": "https://www.twitch.tv/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "unsplash": {
     "service": "Unsplash",
     "url": "https://unsplash.com/@{}",
     "urlRegister": "https://unsplash.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "vsco": {
     "service": "VSCO",
     "url": "https://vsco.co/{}",
     "urlRegister": "https://vsco.co/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "venmo": {
     "service": "Venmo",
     "url": "https://venmo.com/{}",
     "urlRegister": "https://venmo.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "vimeo": {
     "service": "Vimeo",
     "url": "https://vimeo.com/{}",
     "urlRegister": "https://vimeo.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "virustotal": {
     "service": "VirusTotal",
     "url": "https://www.virustotal.com/ui/users/{}/trusted_users",
     "urlRegister": "https://www.virustotal.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "we heart it": {
     "service": "We Heart It",
     "url": "https://weheartit.com/{}",
     "urlRegister": "https://weheartit.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "webnode": {
     "service": "WebNode",
     "url": "https://{}.webnode.cz/",
     "urlRegister": "https://www.webnode.cz/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "fandom": {
     "service": "Fandom",
     "url": "https://community.fandom.com/wiki/User:{}",
     "urlRegister": "https://www.fandom.com/register",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "wikipedia": {
     "service": "Wikipedia",
     "url": "https://www.wikipedia.org/wiki/User:{}",
     "urlRegister": "https://www.wikipedia.org/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "wix": {
     "service": "Wix",
     "url": "https://{}.wix.com",
     "urlRegister": "https://wix.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "wordpress": {
     "service": "WordPress",
     "url": "https://{}.wordpress.com/",
     "urlRegister": "https://wordpress.com",
     "errorType": 1,
     "errorMsg": "wordpress.com</em> doesn&#8217;t&nbsp;exist"
   },
-  {
+  "youpic": {
     "service": "YouPic",
     "url": "https://youpic.com/photographer/{}/",
     "urlRegister": "https://youpic.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "zhihu": {
     "service": "Zhihu",
     "url": "https://www.zhihu.com/people/{}",
     "urlRegister": "https://www.zhihu.com/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "devrant": {
     "service": "devRant",
     "url": "https://devrant.com/users/{}",
     "urlRegister": "https://devrant.com/",
     "errorType": 1,
     "errorMsg": "Join a fun community of developers"
   },
-  {
+  "imgsrc.ru": {
     "service": "iMGSRC.RU",
     "url": "https://imgsrc.ru/main/user.php?user={}",
     "urlRegister": "https://imgsrc.ru/",
     "errorType": 1,
     "errorMsg": "your personal photo hosting site. Simple, fast and free."
   },
-  {
+  "last.fm": {
     "service": "last.fm",
     "url": "https://last.fm/user/{}",
     "urlRegister": "https://last.fm/",
     "errorType": 0,
     "errorMsg": null
   },
-  {
+  "makerlog": {
     "service": "Makerlog",
     "url": "https://api.getmakerlog.com/users/username/{}/",
     "urlRegister": "https://getmakerlog.com/",
     "errorType": 0,
     "errorMsg": null
   }
-]
+}

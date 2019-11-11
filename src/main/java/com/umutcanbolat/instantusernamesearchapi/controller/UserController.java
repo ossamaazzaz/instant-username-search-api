@@ -6,10 +6,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,98 +29,101 @@ import com.umutcanbolat.instantusernamesearchapi.Model.SiteModel;
 @RestController
 public class UserController {
 
-	@Autowired
-	private ResourceLoader resourceLoader;
+  @Autowired private ResourceLoader resourceLoader;
 
-	@RequestMapping("/check/{service}/{username}")
-	@Cacheable("availabilities")
-	public ServiceResponseModel searchUsername(@PathVariable String service, @PathVariable String username)
-			throws FileNotFoundException, UnirestException {
-		try {
+  @RequestMapping("/check/{service}/{username}")
+  @Cacheable("availabilities")
+  public ServiceResponseModel searchUsername(
+      @PathVariable String service, @PathVariable String username)
+      throws FileNotFoundException, UnirestException {
+    try {
 
-			// read sites data from resources
-			InputStream in = getClass().getResourceAsStream("/static/sites.json");
-			BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+      // read sites data from resources
+      InputStream in = getClass().getResourceAsStream("/static/sites.json");
+      BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
-			// parse json to model list
-			Gson gson = new Gson();
-			JsonReader jReader = new JsonReader(reader);
-			Type listType = new TypeToken<ArrayList<SiteModel>>() {
-			}.getType();
-			List<SiteModel> sitesList = gson.fromJson(reader, listType);
+      // parse json to model list
+      Gson gson = new Gson();
+      JsonReader jReader = new JsonReader(reader);
+      Type mapType = new TypeToken<HashMap<String, SiteModel>>() {}.getType();
+      HashMap<String, SiteModel> sitesMap = gson.fromJson(reader, mapType);
+      SiteModel site = sitesMap.get(service.toLowerCase());
+      if (site != null) {
+        String url = site.getUrl().replace("{}", username);
+        // set unirest not to follow redirects
+        //					Unirest.setHttpClient(
+        //
+        //	org.apache.http.impl.client.HttpClients.custom().disableRedirectHandling().build());
+        HttpResponse<String> response =
+            Unirest.get(url)
+                .header("Connection", "keep-alive")
+                .header("Upgrade-Insecure-Requests", "1")
+                .header(
+                    "User-Agent",
+                    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36")
+                .header(
+                    "Accept",
+                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8")
+                .header("Accept-Encoding", "gzip, deflate")
+                .header("Accept-Language", "en-US;q=1")
+                .asString();
+        boolean available = false;
 
-			for (SiteModel site : sitesList) {
-				if (site.getService().equalsIgnoreCase(service)) {
-					String url = site.getUrl().replace("{}", username);
-					// set unirest not to follow redirects
-//					Unirest.setHttpClient(
-//							org.apache.http.impl.client.HttpClients.custom().disableRedirectHandling().build());
-					HttpResponse<String> response = Unirest.get(url).header("Connection", "keep-alive")
-							.header("Upgrade-Insecure-Requests", "1")
-							.header("User-Agent",
-									"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36")
-							.header("Accept",
-									"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8")
-							.header("Accept-Encoding", "gzip, deflate").header("Accept-Language", "en-US;q=1")
-							.asString();
-					boolean available = false;
-					
-					/* 
-					 * Error Types
-					 * 0: returns HTTP 4xx response when the username is not taken.
-					 * 1: still returns HTTP 2xx when the username is not taken, so we check the response body for errorMsg.
-					 * 2: returns HTTP 4xx if the username is not taken or disabled. 
-					 * 	  Since disabled usernames cannot be taken again, we check the response body.
-					 */
-					if (site.getErrorType() == 0) {
-						if (response.getStatus() != 200) {
-							available = true;
-						}
-					} else if (site.getErrorType() == 1) {
-						if (response.getBody().contains(site.getErrorMsg())) {
-							available = true;
-						}
-					}else if (site.getErrorType() == 2) {
-						if (response.getStatus() != 200 && response.getBody().contains(site.getErrorMsg())) {
-							available = true;
-						}
-					}
+        /*
+         * Error Types
+         * 0: returns HTTP 4xx response when the username is not taken.
+         * 1: still returns HTTP 2xx when the username is not taken, so we check the response body for errorMsg.
+         * 2: returns HTTP 4xx if the username is not taken or disabled.
+         * 	  Since disabled usernames cannot be taken again, we check the response body.
+         */
+        if (site.getErrorType() == 0) {
+          if (response.getStatus() != 200) {
+            available = true;
+          }
+        } else if (site.getErrorType() == 1) {
+          if (response.getBody().contains(site.getErrorMsg())) {
+            available = true;
+          }
+        } else if (site.getErrorType() == 2) {
+          if (response.getStatus() != 200 && response.getBody().contains(site.getErrorMsg())) {
+            available = true;
+          }
+        }
 
-					return new ServiceResponseModel(site.getService(), url, available);
-				}
-			}
-			// service not found
-			return new ServiceResponseModel("Service: " + service + " is not supported");
-		} catch (Exception ex) {
-			return new ServiceResponseModel(ex.getMessage());
-		}
-	}
+        return new ServiceResponseModel(site.getService(), url, available);
+      }
 
-	@RequestMapping("/services/getAll")
-	public List<ServiceModel> getServicesList() {
-		try {
+      // service not found
+      return new ServiceResponseModel("Service: " + service + " is not supported");
+    } catch (Exception ex) {
+      return new ServiceResponseModel(ex.getMessage());
+    }
+  }
 
-			List<ServiceModel> serviceList = new ArrayList<ServiceModel>();
+  @RequestMapping("/services/getAll")
+  public List<ServiceModel> getServicesList() {
+    try {
 
-			// read sites data from resources
-			InputStream in = getClass().getResourceAsStream("/static/sites.json");
-			BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+      List<ServiceModel> serviceList = new ArrayList<ServiceModel>();
 
-			// parse json to model list
-			Gson gson = new Gson();
-			JsonReader jReader = new JsonReader(reader);
-			Type listType = new TypeToken<ArrayList<SiteModel>>() {
-			}.getType();
-			List<SiteModel> sitesList = gson.fromJson(reader, listType);
+      // read sites data from resources
+      InputStream in = getClass().getResourceAsStream("/static/sites.json");
+      BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
-			for (SiteModel site : sitesList) {
-				serviceList.add(
-						new ServiceModel(site.getService(), "/" + site.getService().toLowerCase() + "/{username}"));
-			}
-			return serviceList;
-		} catch (Exception ex) {
-			return null;
-		}
+      // parse json to model list
+      Gson gson = new Gson();
+      JsonReader jReader = new JsonReader(reader);
+      Type mapType = new TypeToken<HashMap<String, SiteModel>>() {}.getType();
+      HashMap<String, SiteModel> sitesMap = gson.fromJson(reader, mapType);
 
-	}
+      for (SiteModel site : sitesMap.values()) {
+        serviceList.add(
+            new ServiceModel(
+                site.getService(), "/" + site.getService().toLowerCase() + "/{username}"));
+      }
+      return serviceList;
+    } catch (Exception ex) {
+      return null;
+    }
+  }
 }

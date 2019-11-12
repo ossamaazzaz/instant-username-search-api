@@ -30,6 +30,19 @@ import com.umutcanbolat.instantusernamesearchapi.Model.SiteModel;
 public class UserController {
 
   @Autowired private ResourceLoader resourceLoader;
+  private static HashMap<String, SiteModel> sitesMap;
+
+  static {
+    // read sites data from resources
+    InputStream in = UserController.class.getResourceAsStream("/static/sites.json");
+    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+
+    // parse json to model list
+    Gson gson = new Gson();
+    JsonReader jReader = new JsonReader(reader);
+    Type mapType = new TypeToken<HashMap<String, SiteModel>>() {}.getType();
+    sitesMap = gson.fromJson(reader, mapType);
+  }
 
   @RequestMapping("/check/{service}/{username}")
   @Cacheable("availabilities")
@@ -37,23 +50,9 @@ public class UserController {
       @PathVariable String service, @PathVariable String username)
       throws FileNotFoundException, UnirestException {
     try {
-
-      // read sites data from resources
-      InputStream in = getClass().getResourceAsStream("/static/sites.json");
-      BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-
-      // parse json to model list
-      Gson gson = new Gson();
-      JsonReader jReader = new JsonReader(reader);
-      Type mapType = new TypeToken<HashMap<String, SiteModel>>() {}.getType();
-      HashMap<String, SiteModel> sitesMap = gson.fromJson(reader, mapType);
       SiteModel site = sitesMap.get(service.toLowerCase());
       if (site != null) {
         String url = site.getUrl().replace("{}", username);
-        // set unirest not to follow redirects
-        //					Unirest.setHttpClient(
-        //
-        //	org.apache.http.impl.client.HttpClients.custom().disableRedirectHandling().build());
         HttpResponse<String> response =
             Unirest.get(url)
                 .header("Connection", "keep-alive")
@@ -67,6 +66,7 @@ public class UserController {
                 .header("Accept-Encoding", "gzip, deflate")
                 .header("Accept-Language", "en-US;q=1")
                 .asString();
+
         boolean available = false;
 
         /*
@@ -89,10 +89,8 @@ public class UserController {
             available = true;
           }
         }
-
         return new ServiceResponseModel(site.getService(), url, available);
       }
-
       // service not found
       return new ServiceResponseModel("Service: " + service + " is not supported");
     } catch (Exception ex) {
@@ -103,7 +101,6 @@ public class UserController {
   @RequestMapping("/services/getAll")
   public List<ServiceModel> getServicesList() {
     try {
-
       List<ServiceModel> serviceList = new ArrayList<ServiceModel>();
 
       // read sites data from resources

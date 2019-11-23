@@ -6,6 +6,13 @@
     "errorType": 0,
     "errorMsg": null
   },
+  "tiktok": {
+    "service": "TikTok",
+    "url": "https://www.tiktok.com/@{}",
+    "urlRegister": "https://www.tiktok.com/",
+    "errorType": 0,
+    "errorMsg": null
+  },
   "twitter": {
     "service": "Twitter",
     "url": "https://twitter.com/{}",
